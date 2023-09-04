@@ -28,7 +28,7 @@ class InputQuantum():
         key_dict = {key: i for i, key in enumerate(key_list)}
         for m in eventKey:
             event_gate = key_dict.get(db_key[m])
-            # puerta XOR 
+            
             self.__gates[event_gate // 2] ^= (event_gate % 2) + 1
         return self.__gates
 
